@@ -1,10 +1,10 @@
-# Linux on Huawei MateBook 13 (2019)
+# Linux on Huawei MateBook 15 (2021)
 
-> Brain dump: MateBook 13 (Wright-W19) running Debian heavily inspired by [lidel's documentation of running Linux on MateBook X](https://github.com/lidel/linux-on-huawei-matebook-x-2017).
+> Brain dump: MateBook 15 (BOD-WXX9) running Debian or Fedora heavily inspired by [lidel's documentation of running Linux on MateBook X](https://github.com/lidel/linux-on-huawei-matebook-x-2017).
 
 ## Background
 
-Huawei MateBook 13, released in 2019, has at least two modifications (different CPUs, integrated vs. dedicated graphics). Both come with Microsoft Windows 10 and there initially was no information at all concerning Linux support.
+Huawei MateBook D15, released in 2021, has at least two modifications (different CPUs, integrated vs. dedicated graphics). Both come with Microsoft Windows 11 and there initially was no information at all concerning Linux support.
 
 I am running Debian on the more simple MateBook 13 variant, model Wright-W19. This repository documents what works and what does not.
 
