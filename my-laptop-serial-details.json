@@ -1,0 +1,43 @@
+{
+    "responseCode": "200",
+    "responseDesc": "success",
+    "responseData": {
+        "device": {
+            "warrEndDate": "REDACTED",
+            "warrStartDate": "REDACTED",
+            "snimei": "REDACTED",
+            "imei": "REDACTED",
+            "productOffering": "REDACTED",
+            "productType": "BohrD-WDH9C",
+            "itemCode": "REDACTED",
+            "mainteModeCode": "1000",
+            "warrStatus": "W",
+            "isGuaranteeFlag": "Y",
+            "isChangeFlag": "Y",
+            "lifeCycleFlag": "N10",
+            "deviceTypeFlagCode": null,
+            "dvcEleCountryCode": "PH",
+            "dvcEleCountryName": "Philippines",
+            "electronicCardShow": "1",
+            "skuItemCode": "REDACTED",
+            "skuName": "HUAWEI MateBook D 15 2021 15.6 inch TGL-i5 UMA LPDDR4X 8GB SSD 256GB Mystic Silver WIN11",
+            "recordList": [
+                {
+                    "deviceBussType": "Date Of Production",
+                    "deviceBussCode": "01",
+                    "dateTime": "2022/6/1"
+                },
+                {
+                    "deviceBussType": "Arrival",
+                    "deviceBussCode": "03",
+                    "dateTime": "2022/8/11"
+                },
+                {
+                    "deviceBussType": "激活",
+                    "deviceBussCode": "05",
+                    "dateTime": "2022/9/17"
+                }
+            ]
+        }
+    }
+}
