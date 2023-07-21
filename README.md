@@ -82,19 +82,22 @@ If you want correct CPU temperature displayed in `byobu` status notifications, a
 ## Display
 
 ### Fractional Scaling
+
 On KDE, Deepin and other Qt-based desktop environments, fractional scaling is supported without any hassle but this is not the case for GTK-based desktop environments such as GNOME and XFCE. Using Wayland can be an option, but the apps that don't support Wayland natively will still have issues such fuzziness all over the window. A workaround for Xorg allows for 150% scaling without any tear at the cost of a little performance drop:
 Copy `20-intel.conf` and `10-monitor.conf` to `/etc/X11/xorg.conf.d/` and reboot.
 It is worth noticing that kernels between 5.0 and 5.5 have known issues with desktop scaling, fixed in 5.5. Ubuntu users can use Ubuntu-18.04-HWE kernel that contains the fix and also is free of the [log flooding issue](#touchpad).
 
 ## Soundcard
 
-Sound generally works OK out of the box, the only thing not working is headphones autodetection (i.e. it is necessary to manually switch from speakers to headphones and back). This can be fixed, as [pointed out](https://github.com/nekr0z/linux-on-huawei-matebook-13-2019/issues/3) by [ffftwo](https://github.com/ffftwo) and [Feodor Rusanov](https://github.com/frusanov):
+Sound generally works OK out of the box, the only thing not working is headphones autodetection (i.e. it is necessary to manually switch from speakers to headphones and back). This can be fixed by executing the script that i made (with AI :wink:)
 
-    sudo sh -c "echo 'options snd-hda-intel model=alc255-acer,dell-headset-multi' >> /etc/modprobe.d/sound.conf"
+You can either install it:
 
-You may need to reset ALSA after this for the headphones to work:
-    
-    sudo alsactl restore
+    sudo cp bin/configure_alsa.sh /usr/local/bin/alsa-configure
+
+Or execute it directly:
+
+    cd bin; sudo ./configure_alsa.sh
 
 The headset microphone will not be switched to automatically when a microphone-enabled headset is plugged. However, there will be an option to switch to it, and the system will automatically switch back to the internal microphone as soon as the headset is unplugged.
 
@@ -141,7 +144,7 @@ to set the thresholds to any percentages you like. This [batpro script](batpro) 
 > $ sudo usermod -a -G huawei-wmi $USER
 > ```
 > In this case you don't need `sudo` to set thresholds.
-> 
+>
 > Beware, though, that if you plug the laptop in _before_ waking it up, the magic won't work (knowing that Windows' behaviour is exactly the same may provide some consolation).
 
 ## Power Management
