@@ -53,3 +53,13 @@ elif [ "$choice" -eq 2 ]; then
 fi
 
 echo "Configuration completed."
+
+# Prompt the user for a reboot
+read -p "A reboot is required to apply the changes. Would you like to reboot now? (y/n): " reboot_choice
+
+if [ "$reboot_choice" == "y" ] || [ "$reboot_choice" == "Y" ]; then
+  echo "Rebooting..."
+  sudo reboot
+else
+  echo "Please remember to reboot your system to apply the changes."
+fi
